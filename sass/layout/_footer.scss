@@ -1,0 +1,57 @@
+.page-footer {
+  background-color: var(--footer-bgc);
+  padding: 60px 0;
+}
+
+.address {
+  @include font-style(400, 14px, 24px);
+  font-style: normal;
+  color: #ffffff;
+
+  &__description,
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__link {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.join {
+  margin-left: 85px;
+}
+
+.slogan {
+  display: inline-block;
+  margin-bottom: 20px;
+  @include font-style(700, 14px, 16px);
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.subscription {
+  margin-left: auto;
+}
+
+.form {
+  display: flex;
+
+  &__input {
+    width: 358px;
+    height: 50px;
+    display: block;
+    margin-right: 12px;
+    padding: 15px 16px;
+    @include font-style(400, 16px, 20px, 0.08em);
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    &::placeholder {
+      @include font-style(400, 16px, 20px);
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
