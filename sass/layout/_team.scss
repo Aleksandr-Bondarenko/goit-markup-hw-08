@@ -21,6 +21,12 @@
     border-radius: 0px 0px 4px 4px;
     background-color: #ffffff;
 
+    &:not(:last-child) {
+      @media screen and (min-width: 480px) {
+        margin-bottom: var(--primary-gap);
+      }
+    }
+
     @media screen and (min-width: 768px) {
       margin-top: var(--primary-gap);
       margin-left: var(--primary-gap);
@@ -37,7 +43,7 @@
   }
 
   &__box {
-    padding: 30px 122px 24px;
+    padding: 30px 0 24px;
 
     @media screen and (min-width: 768px) {
       padding: 30px 74px 24px;
