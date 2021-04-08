@@ -1,4 +1,8 @@
 .abilities {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
   padding: 0 0 var(--section-pdg);
 
   &__list {

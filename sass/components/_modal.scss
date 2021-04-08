@@ -1,8 +1,8 @@
 .modal {
   position: absolute;
   padding: 40px;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -12,11 +12,20 @@
   background-color: #ffffff;
   transition: transform 250ms var(--animation-function);
 
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+
   &__slogan {
     margin-bottom: 12px;
-    @include font-style(700, 20px, 23px);
+    @include font-style(700, 20px, 30px);
     text-align: center;
     color: var(--main-title-color);
+
+    @media screen and (min-width: 1200px) {
+      @include font-style(700, 20px, 23px);
+    }
   }
 
   &__icon {

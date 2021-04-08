@@ -1,5 +1,8 @@
 .customers {
-  padding: 94px 0;
+  padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 
   &__list {
     display: flex;
@@ -13,16 +16,24 @@
     border-radius: 4px;
     margin-top: var(--primary-gap);
     margin-left: var(--primary-gap);
-    width: 170px;
     height: 90px;
     transition: border-color 250ms var(--animation-function);
     cursor: pointer;
+    flex-basis: calc(100% / 2 - var(--primary-gap));
 
     &:hover {
       border-color: var(--action-color);
       & .link {
         fill: currentColor;
       }
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% / 3) - var(--primary-gap));
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% / 6) - var(--primary-gap));
     }
   }
 

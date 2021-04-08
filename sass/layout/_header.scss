@@ -1,14 +1,38 @@
 .page-header {
   border-bottom: 1px solid #ececec;
+  position: relative;
 
-  & .link {
-    display: block;
+  &__menu-open {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    transition: fill 250ms var(--animation-function);
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      fill: var(--action-color);
+    }
   }
 }
 
 .site-nav {
   &__list {
-    display: flex;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
   }
 
   &__item:not(:last-child) {
@@ -16,7 +40,7 @@
   }
 
   &__link {
-    padding: 32px 0;
+    padding: 32px 0 31px;
     @include font-style(500, 14px, 16px, 0.02em);
     color: var(--main-title-color);
     transition: color 250ms var(--animation-function);
@@ -28,7 +52,7 @@
 
     &_current::after {
       position: absolute;
-      bottom: -1px;
+      bottom: 0;
       content: '';
       display: block;
       height: 4px;
@@ -45,22 +69,42 @@
 }
 
 .contacts {
-  display: flex;
+  display: none;
   margin-left: auto;
-  align-items: baseline;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    padding: 21px 0 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 
   &__item:not(:first-child) {
-    margin-left: 30px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-top: 10px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 30px;
+    }
   }
 
   &__link {
-    @include font-style(500, 14px, 16px, 0.02em);
+    @include font-style(500, 12px, 14px, 0.02em);
     color: var(--paragraph-color);
+    display: flex;
+    align-items: center;
     transition: color 250ms var(--animation-function);
 
     &:hover,
     &:focus {
       color: var(--action-color);
+      &__icon {
+        fill: currentColor;
+      }
     }
   }
 

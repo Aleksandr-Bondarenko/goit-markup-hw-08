@@ -1,3 +1,7 @@
 .portfolio {
-  padding: var(--section-pdg) 0;
+  padding: var(--mob-tab-pdg) 0;
+
+  @media screen and (min-width: 1200px) {
+    padding: var(--section-pdg) 0;
+  }
 }

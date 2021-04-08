@@ -1,6 +1,18 @@
 .page-footer {
   background-color: var(--footer-bgc);
   padding: 60px 0;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__tablet-flexbox {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-around;
+    }
+  }
 }
 
 .address {
@@ -10,16 +22,31 @@
 
   &__description,
   &__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+      display: inline-block;
+    }
   }
 
   &__link {
     color: rgba(255, 255, 255, 0.6);
   }
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
 }
 
 .join {
-  margin-left: 85px;
+  @media screen and (min-width: 768px) {
+    // dfdfdf
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 86px;
+  }
 }
 
 .slogan {
@@ -31,23 +58,39 @@
 }
 
 .subscription {
-  margin-left: auto;
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
 }
 
 .form {
-  display: flex;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 
   &__input {
-    width: 358px;
-    height: 50px;
+    width: 100%;
     display: block;
-    margin-right: 12px;
     padding: 15px 16px;
     @include font-style(400, 16px, 20px, 0.08em);
     background-color: transparent;
     color: #ffffff;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
+
+    @media screen and (max-width: 1199px) {
+      margin: 0 auto 20px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: inline-block;
+      width: 358px;
+      margin-right: 12px;
+    }
 
     &::placeholder {
       @include font-style(400, 16px, 20px);

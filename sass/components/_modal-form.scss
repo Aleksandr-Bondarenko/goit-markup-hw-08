@@ -67,7 +67,11 @@
 
   &__text,
   &__link {
-    @include font-style(400, 14px, 24px);
+    @include font-style(400, 12px, 14px, 0.025em);
+
+    @media screen and (min-width: 1200px) {
+      @include font-style(400, 14px, 24px);
+    }
   }
 
   &__text {

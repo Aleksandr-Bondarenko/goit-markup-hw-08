@@ -1,6 +1,10 @@
 .logo {
   font-family: var(--secondary-font);
-  @include font-style(700, 26px, 31px);
+  @include font-style(700, 24px, 28px);
+  @media screen and (min-width: 1200px) {
+    @include font-style(700, 26px, 31px);
+  }
+
   color: #2196f3;
   animation-duration: 1000ms;
   animation-delay: 250ms;
@@ -20,8 +24,18 @@
   }
 
   .page-header & {
-    margin-right: 93px;
-    padding: 24px 0;
+    padding: 16px 0 15px;
+    display: inline-block;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 88px;
+      padding: 26px 0 25px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+      padding: 24px;
+    }
   }
 
   .page-footer & {
