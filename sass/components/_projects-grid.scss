@@ -59,13 +59,13 @@
     background-color: rgba(33, 150, 243, 0.9);
     opacity: 0;
     transform: translateY(100%);
-    transition: transform 250ms var(--animation-function),
-      opacity 250ms var(--animation-function);
+    transition: opacity 250ms var(--animation-function),
+      transform 250ms var(--animation-function);
 
     .projects__item:hover &,
     .projects__link:focus & {
-      transform: translateY(0%);
       opacity: 1;
+      transform: translateY(0%);
     }
   }
 }
