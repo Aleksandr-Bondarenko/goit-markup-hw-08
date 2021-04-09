@@ -65,20 +65,17 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid green;
 }
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
-    outline: 1px solid blue;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
-    outline: 1px solid red;
   }
 }
 
@@ -606,8 +603,8 @@ img {
   border: none;
   background-color: transparent;
   margin-left: auto;
-  -webkit-transform: fill 250ms var(--animation-function);
-          transform: fill 250ms var(--animation-function);
+  -webkit-transition: fill 250ms var(--animation-function);
+  transition: fill 250ms var(--animation-function);
   cursor: pointer;
 }
 
@@ -769,15 +766,17 @@ img {
   height: 100vh;
   left: 50%;
   background-color: #ffffff;
+  opacity: 0;
   -webkit-transform: translateY(-100%) translateX(-50%);
           transform: translateY(-100%) translateX(-50%);
-  -webkit-transition: -webkit-transform 250ms var(--animation-function);
-  transition: -webkit-transform 250ms var(--animation-function);
-  transition: transform 250ms var(--animation-function);
-  transition: transform 250ms var(--animation-function), -webkit-transform 250ms var(--animation-function);
+  -webkit-transition: opacity 250ms var(--animation-function), -webkit-transform 250ms var(--animation-function);
+  transition: opacity 250ms var(--animation-function), -webkit-transform 250ms var(--animation-function);
+  transition: opacity 250ms var(--animation-function), transform 250ms var(--animation-function);
+  transition: opacity 250ms var(--animation-function), transform 250ms var(--animation-function), -webkit-transform 250ms var(--animation-function);
 }
 
 .mobile-menu.is-open {
+  opacity: 1;
   -webkit-transform: translateY(0) translateX(-50%);
           transform: translateY(0) translateX(-50%);
 }
@@ -1112,7 +1111,7 @@ img {
   background-color: #ffffff;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .team__item:not(:last-child) {
     margin-bottom: var(--primary-gap);
   }

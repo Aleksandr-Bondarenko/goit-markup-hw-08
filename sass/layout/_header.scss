@@ -9,7 +9,7 @@
     border: none;
     background-color: transparent;
     margin-left: auto;
-    transform: fill 250ms var(--animation-function);
+    transition: fill 250ms var(--animation-function);
     cursor: pointer;
 
     &:hover,
@@ -134,10 +134,13 @@
   height: 100vh;
   left: 50%;
   background-color: #ffffff;
+  opacity: 0;
   transform: translateY(-100%) translateX(-50%);
-  transition: transform 250ms var(--animation-function);
+  transition: opacity 250ms var(--animation-function),
+    transform 250ms var(--animation-function);
 
   &.is-open {
+    opacity: 1;
     transform: translateY(0) translateX(-50%);
   }
 

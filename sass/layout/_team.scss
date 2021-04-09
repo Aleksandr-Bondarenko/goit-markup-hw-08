@@ -22,7 +22,7 @@
     background-color: #ffffff;
 
     &:not(:last-child) {
-      @media screen and (min-width: 480px) {
+      @media screen and (max-width: 767px) {
         margin-bottom: var(--primary-gap);
       }
     }
