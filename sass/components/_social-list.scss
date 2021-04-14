@@ -11,12 +11,6 @@
     }
   }
 
-  .page-footer & {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 60px;
-    }
-  }
-
   &__item:not(:last-child) {
     margin-right: 10px;
   }

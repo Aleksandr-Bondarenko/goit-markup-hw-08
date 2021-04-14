@@ -33,15 +33,14 @@
   &__link {
     color: rgba(255, 255, 255, 0.6);
   }
-
-  @media screen and (max-width: 1199px) {
-    margin-bottom: 60px;
-  }
 }
 
 .join {
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
+
   @media screen and (min-width: 768px) {
-    // dfdfdf
   }
 
   @media screen and (min-width: 1200px) {
@@ -58,6 +57,10 @@
 }
 
 .subscription {
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
+  }
+
   @media screen and (min-width: 1200px) {
     margin-left: auto;
   }
